@@ -1,38 +1,111 @@
-.App {
+* {
+  /* fix description input field */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17181F;
+  color: #DDD;
+}
+
+main {
+  max-width: 368px;
+  /* center */
+  margin: 30px auto;
+
+}
+
+h1 {
   text-align: center;
+  color: #FFF;
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 span {
+  font-size: 1rem;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 9px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form input {
+  width: 100%;
+  background-color: transparent;
+  color: #FFF;
+  border: 2px solid #30313D;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+form input[type="date"] {
+  color: #777;
+}
+
+/* Target the default calendar icon in webkit-based browsers */
+form input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  /* Invert the colors of the icon */
+}
+
+form div.basics {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+form button {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #DDD;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.transactions {
+  margin-top: 10px;
+
+}
+
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #30313D;
+}
+
+/* remove first line */
+div.transaction:first-child {
+  border-top: 0;
+}
+
+div.transaction div.name {
+  font-size: 1rem;
+}
+
+div.transaction div.description {
+  font-size: .75rem;
+  color: #888;
+}
+
+div.right {
+  text-align: right;
+}
+
+div.price.green {
+  color: #1C1
+}
+
+div.price.red {
+  color: #C11;
+}
+
+div.transaction div.datetime {
+  font-size: .75rem;
+  color: #888;
 }
